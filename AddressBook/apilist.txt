@@ -1,0 +1,9 @@
+http://localhost/contactApp/getContactList.php
+
+http://localhost/contactApp/getContactDetails.php?id=4
+
+http://localhost/contactApp/deleteContact.php?id=3
+
+http://localhost/contactApp/addContact.php
+
+http://localhost/contactApp/updateContact.php

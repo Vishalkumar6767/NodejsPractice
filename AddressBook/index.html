@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AddressBook">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<!-- FontAwesome CSS -->
+	<link rel="stylesheet" href="css/fa-all.min.css" />
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/main.css" />
+	<title>Address Book</title>
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark custom-primary-bg-color">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/"><strong>Address</strong><small>Book</small></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#!/contact-list">Contact List</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#!/add-new">Add New</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Navbar -->
+
+	<!-- Main Content -->
+	<main class="container-fluid content-wrapper">
+		<ng-view></ng-view>
+	</main>
+	<!-- Main Content -->
+
+	<!-- Bootstrap JS -->
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<!-- Angular JS -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

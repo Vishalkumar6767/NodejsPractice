@@ -1,0 +1,52 @@
+<!-- Page header -->
+<div class="row content-header mb-4">
+  <div class="col-md-8">
+    <h1>Contacts</h1>
+  </div>
+  <div class="col-md-4 align-items-center">
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text">Filter: </span>
+      <div class="btn-group btn-group-sm" role="group">
+        <input type="radio" class="btn-check" name="filter" id="filter1" value="name" ng-model="searchType" />
+        <label class="btn btn-outline-primary" for="filter1">Name</label>
+        <input type="radio" class="btn-check" name="filter" id="filter2" value="city" ng-model="searchType" />
+        <label class="btn btn-outline-primary" for="filter2">City</label>
+        <input type="radio" class="btn-check" name="filter" id="filter3" value="state" ng-model="searchType" />
+        <label class="btn btn-outline-primary" for="filter3">State</label>
+      </div>
+      <input type="search" class="form-control" id="filter-text" vaule="" ng-model="searchText" />
+    </div>
+  </div>
+</div>
+<!-- Page header -->
+
+<!-- Contact Cards -->
+<div class="row d-flex align-items-stretch">
+  <div ng-repeat="contact in contacts | searchFilter:searchType:searchText" class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch mb-2">
+    <div class="card contact-card overflow-hidden">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4 text-center initials">
+            <h1>
+              {{contact.first_name | firstChar}}
+            </h1>
+          </div>
+          <div class="col-8">
+            <h2 class="lead text-truncate">
+              <a href="#!/details/{{contact.id}}"><b>
+                {{contact.title}} {{contact.first_name}} {{contact.last_name}}
+              </b></a>
+            </h2>
+            <p class="text-muted text-sm text-truncate">
+              <i class="fa fa-envelope"></i> {{contact.email}}
+            </p>
+            <p class="text-muted text-sm text-truncate">
+              <i class="fa fa-mobile"></i> {{contact.phone1}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Cards -->
